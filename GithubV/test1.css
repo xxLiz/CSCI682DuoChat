@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --button-size: 56px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Euclid Circular A", "Poppins", sans-serif;
+    background: #0b0c10;
+    color: #c5c6c7; /* Light gray text */
+    margin: 0;
+    transition: background 0.5s; /* Smooth background transition */
+}
+
+nav {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(11, 12, 16, 0.9); /* Slight transparency */
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.5s; /* Smooth transition on nav background */
+}
+
+nav h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #66fcf1; /* Light teal for the nav brand */
+}
+
+.end {
+    flex: 0 0 200px;
+    text-align: right; /* Align last item to the right */
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-items a {
+    display: grid;
+    place-items: center;
+    width: var(--button-size);
+    height: var(--button-size);
+    color: #c5c6c7; /* Light gray for links */
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav-items a:hover {
+    color: #45a29e; /* Change color on hover */
+}
+
+section {
+    height: 100vh;
+    padding: 0 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(31, 40, 51, 0.7);
+    transition: background-color 0.5s; /* Smooth transition on section background */
+}
+
+section:nth-child(even) {
+    background-color: rgba(31, 40, 51, 0.5);
+}
+
+section p {
+    max-width: 600px;
+    font-size: 20px;
+    margin: 2%;
+}
+
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v207/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzazHD_dY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2) format('woff2');
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-size: 30px;
+    display: inline-block;
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start; /* Align items at the start */
+    margin-bottom: 20px; /* Space between sections */
+}
+
+.left-align, .right-align {
+    max-width: 33%; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.left-align {
+    margin-right: 20px; /* Space between the image and text */
+}
+
+.right-align {
+    margin-left: auto; /* Pushes the image to the right */
+}
+
+h2 {
+    margin: 50px 0 10px; /* Space above and below the heading */
+}
+
+p {
+    margin: 0 0 10px; /* Space below the paragraph */
+}
+
+.background-section {
+    background-image: url('BG.png');
+    background-size: cover;
+    height: 75px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    font-size: 24px; 
+}
+
+footer {
+    background-color: #0b0c10; /* Footer background color */
+    color: #c5c6c7; /* Footer text color */
+    text-align: center;
+    padding: 20px; /* Footer padding */
+}
+
+/* Cards Section Styles */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center the cards */
+    padding: 20px;
+}
+
+.card {
+    background: #66fcf1;
+    color: #1f2833;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    min-width: 200px; /* Minimum width for cards */
+    max-width: calc(33% - 20px); /* Max width for larger screens */
+    flex: 1 1 200px; /* Allow cards to grow and shrink */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Smooth card hover effects */
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02); /* Lift and scale effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    background: #57c7d9; /* Change background on hover */
+}
+
+/* Video Section Styles */
+#video-section {
+    position: relative;
+    height: 100vh; /* Full height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%; /* Cover the section */
+    min-height: 100%; /* Cover the section */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    transform: translate(-50%, -50%); /* Center the video */
+    z-index: 1; /* Behind overlay */
+}
+
+.video-overlay {
+    position: relative; /* Ensure this is above the video */
+    z-index: 2; /* Above the video */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height */
+    text-align: center;
+    color: white; /* Text color */
+    padding: 20px; /* Padding around the text */
+}
+
+.video-overlay h2 {
+    font-size: 48px; /* Title size */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.video-overlay p {
+    font-size: 20px; /* Description size */
+    max-width: 600px; /* Max width for readability */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .card {
+        max-width: calc(50% - 20px); /* Adjust max width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        max-width: calc(100% - 20px); /* Full width for mobile */
+    }
+}
