@@ -20,7 +20,7 @@ body {
 
 nav {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
@@ -133,15 +133,16 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white; 
-    font-size: 24px; 
+    color: white;
+    font-size: 24px;
 }
 
 footer {
     background-color: #0b0c10; /* Footer background color */
     color: #c5c6c7; /* Footer text color */
     text-align: center;
-    padding: 20px; /* Footer padding */
+    padding: 0 20px; /* Footer padding */
+	height: 24px;
 }
 
 /* Cards Section Styles */
@@ -177,6 +178,17 @@ footer {
     overflow: hidden; /* Hide overflow */
 }
 
+.start-chat-button {
+    font-size: 30px;
+    font-weight: 600;
+    border: 2px solid #66FCF1;
+    border-radius: 50px;
+    opacity: 0.7;
+    padding: 10px 30px;
+    background-color: #66FCF1;
+    color: #1F2833;
+}
+
 .background-video {
     position: absolute;
     top: 50%;
@@ -210,6 +222,73 @@ footer {
 .video-overlay p {
     font-size: 20px; /* Description size */
     max-width: 600px; /* Max width for readability */
+}
+
+/* Registration Form */
+.registration-login-page {
+	height: 100vh;
+	overflow: hidden;
+}
+.registration-login-container {
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 24px);
+}
+
+.registration-login-title {
+	text-align: center;
+	color: white;
+	margin-top: 5px;
+}
+
+.registration-login-text {
+	text-align: center;
+	color: white;
+}
+
+.registration-login-text a {
+	color: #45A29E;
+	font-weight: 600;
+}
+
+.registration-login-form {
+	display: flex;
+	flex-direction: column;
+	width: 50vw;
+	margin: auto;
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+.register-login-button {
+	width: 200px;
+    border: 2px solid #66FCF1;
+    border-radius: 50px;
+    opacity: 0.7;
+    padding: 10px 30px;
+    background-color: #66FCF1;
+    color: #1F2833;
+	display: flex;
+	margin: 0 auto;
+	font-weight: 600;
+}
+
+/* Form section */
+form {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	padding: 40px 30px;
+	background-color: #00000080;
+	color: #66FCF1;
+}
+
+form input {
+	color: #C5C6C7;
+	border: none;
+	padding: 10px 15px;
+	background-color: #00000080;
+	appearance: none;
 }
 
 /* Responsive styles */
